@@ -2,7 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Welcome User!</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="styles.css">
     <script
             src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
@@ -19,20 +19,25 @@
         document.getElementById("form1").submit();
 		alert("Employee details saved successfully");
 	 }
+
     </script>
 </head>
 <body>
 <div class="container-fluid">
-<form id="form1" th:object="${employee}" method="POST">
-    <div class="row">
-    <label for="empId">Enter Emp ID : <input type="text" id= "empId" th:field="*{empId}" placeholder="Employee ID" required></label><br>
-    <label for="empName">Enter Emp Name : <input type="text" id="empName"  th:field="*{empName}" placeholder="Name" required></label><br>
-    <label for="empAge">Enter Emp Age : <input type="text" id="empAge"  th:field="*{empAge}" placeholder="Age" required></label><br>
-    <label for="empAddress">Enter Emp Address : <input type="text" id="empAddress"  th:field="*{empAddress}" placeholder="Address" required></label><br>
-    <input type="button" id="demo" onclick="loadDoc()" value="Submit form">
-    <input type="reset" value="Reset" />
-    </div>
-</form>
+    <form id="form1" th:object="${employee}" method="POST">
+        <div class="row">
+            <label for="empId">Enter Emp ID : <input type="text" id="empId" th:field="*{empId}"
+                                                     placeholder="Employee ID" required></label><br>
+            <label for="empName">Enter Emp Name : <input type="text" id="empName" th:field="*{empName}"
+                                                         placeholder="Name" required></label><br>
+            <label for="empAge">Enter Emp Age : <input type="text" id="empAge" th:field="*{empAge}" placeholder="Age"
+                                                       required></label><br>
+            <label for="empAddress">Enter Emp Address : <input type="text" id="empAddress" th:field="*{empAddress}"
+                                                               placeholder="Address" required></label><br>
+            <input type="button" id="demo" onclick="loadDoc()" value="Submit form">
+            <input type="reset" value="Reset"/>
+        </div>
+    </form>
 
 </div>
 
