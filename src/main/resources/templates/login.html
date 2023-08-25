@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Welcome User!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form id="Form1" action="#" th:action="@{/api/v2/emp/submitLogin}" method="post">
+<!--    <p>Id: <input type="text" th:field="*{id}" /></p>-->
+<!--    <p>Message: <input type="text" th:field="*{content}" /></p>-->
+    <p for="id">Enter the employee Id: <input type="text" id="id" name="empId"/></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<form id="Form2">
+    <label>Employee Name : [[${empName}]]</label><br>
+    <label>Employee Age : [[${empAge}]]</label><br>
+   <label>Employee Address : [[${empAddress}]]</label>
+
+</form>
+
+</body>
+</html>
